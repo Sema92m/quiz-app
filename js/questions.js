@@ -2,18 +2,18 @@
 let questions = [
     {
         numb: 1,
-        question: "Konstruktor ktory ma wielka wiedza konstruktorska (i nie tylko)",
+        question: "Konstruktor który ma wielką wiedzę konstruktorską (i nie tylko)",
         answer: "S.Z.",
         options: [
             "P.K.",
             "S.Z.",
             "M.C.",
-            "L.R."
+            "Ł.R."
         ]
     },
     {
         numb: 2,
-        question: "Jedyny konstruktor majacy stopien PROFFESORA",
+        question: "Konstruktor mający stopien profesora",
         answer: "A.W.",
         options: [
             "R.S.",
@@ -24,7 +24,7 @@ let questions = [
     },
     {
         numb: 3,
-        question: "Konstruktor ktory ma swoj LAS i 'Indastry' ",
+        question: "Konstruktor który ma swój las i 'Indastry'",
         answer: "M.S.",
         options: [
             "M.S.",
@@ -35,18 +35,18 @@ let questions = [
     },
     {
         numb: 4,
-        question: "Konstruktor ktory zapierdala co dziennie 60 km w jedna strone zeby swoja wiedza wspierac AMS",
-        answer: "L.R.",
+        question: "Konstruktor który zapierdala codziennie 60km w jedną strone żeby swoją wiedzą wspierać AMS",
+        answer: "Ł.R.",
         options: [
             "A.W.",
             "R.S.",
             "M.C.",
-            "L.R."
+            "Ł.R."
         ]
     },
     {
         numb: 5,
-        question: "Konstruktor ktory kupil fotowaltaike za gotowke i bierze tylko 1700zl za granie na msze",
+        question: "Konstruktor który kupił fotowoltaike za gotówke i bierze tylko 1700zl za granie na msze",
         answer: "P.K.",
         options: [
             "A.W.",
@@ -55,4 +55,4 @@ let questions = [
             "R.S."
         ]
     },
-];
+];   
