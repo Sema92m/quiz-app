@@ -91,7 +91,8 @@ const que_text = document.querySelector(".que_text")
 
 //Creating a new span and div tag for question and option  and passing the value using array index
 let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
-let option_tag = '<div class="option"><span>' + questions[index].options[0] +'</span></div>' +'<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
+let option_tag = '<div class="option"><span>' + questions[index].options[0] +'</span></div>' 
++'<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
 +'<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
 +'<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
 que_text.innerHTML = que_tag; //Adding new span tag inside que_tag
@@ -189,16 +190,18 @@ function showResult(){
 //         }
 //     }
 // }
-function startTimerLine(time){
-    counterLine = setInterval(timer, 29);
-    function timer(){
-        time += 1; //Upgrading time value width 1
-        time_line.style.width = time + "px"; //Increasing width of time_line with px by time value
-        if(time > 549){ //If time value is greater than 549
-            clearInterval(counterLine); //Clear interval
-        }
-    }
-}
+
+// function startTimerLine(time){
+//     counterLine = setInterval(timer, 29);
+//     function timer(){
+//         time += 1; //Upgrading time value width 1
+//         time_line.style.width = time + "px"; //Increasing width of time_line with px by time value
+//         if(time > 549){ //If time value is greater than 549
+//             clearInterval(counterLine); //Clear interval
+//         }
+//     }
+// }
+
 function queCounter(index){
     //Creating a new span tag and passing the question number and total 
     let totalQueCounTag = '<span><p>Pytanie</p><p>'+ index + '</p> z <p>'+ questions.length;

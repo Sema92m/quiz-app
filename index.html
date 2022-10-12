@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komstruktory AMS</title>
-    <link rel="shortcut icon" href="./img/test-svgrepo-com.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <!--Fontawesome CDN link for icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
-<body>
-    <!--Start Quiz Button-->
-    <div class="start_btn"><button>Zaczynamy</button></div>
-    <!--Info Box-->
-    <div class="info_box">
-        <div class="info-title"><span>Zasady gry</span></div>
-        <div class="info-list">
-            <div class="info">1. Prosze odnieść się do gry z humorem.</div>
-            <div class="info">2. Brak możliwości zmiany odpowiedzi po klikneciu.</div>
-            <div class="info">3. Pomysły i korekty prosze kierować na tokarke CNC.</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Konstruktory AMS</title>
+        <link
+            rel="shortcut icon"
+            href="./img/test-svgrepo-com.svg"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <!--Fontawesome CDN link for icons-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!--Start Quiz Button-->
+        <div class="start_btn"><button>Zaczynamy</button></div>
+        <!--Info Box-->
+        <div class="info_box">
+            <div class="info-title"><span>Zasady gry</span></div>
+            <div class="info-list">
+                <div class="info">1. Prosze odnieść się do gry z humorem.</div>
+                <div class="info">
+                    2. Brak możliwości zmiany odpowiedzi po klikneciu.
+                </div>
+                <div class="info">
+                    3. Pomysły i korekty prosze kierować na tokarke CNC.
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Wychodzę</button>
+                <button class="restart">Star!</button>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="quit">Wychodze</button>
-            <button class="restart">Startujemy</button>
-        </div>
-    </div>
-    
-    <!--Quiz Box-->
-    <div class="quiz_box">
-        <header>
-            <div class="title">Test znajomości konstruktorów AMS</div>
-            <!-- <div class="timer">
+        <!--Quiz Box-->
+        <div class="quiz_box">
+            <header>
+                <div class="title">Test znajomości konstruktorów AMS</div>
+                <!-- <div class="timer">
                 <div class="time_left_txt">Time Left</div>
                 <div class="timer_sec">15</div>
             </div>
             <div class="time_line"></div> -->
-        </header>
-        <section>
-            <div class="que_text">
-                <!--Here w'll insert questions from Javascript file-->
-            </div>
-            <div class="option_list">
-                <!--Here w'll insert options from Javascript File-->
-            </div>
-        </section>
-
-        <!--Footer of Quiz Box-->
-        <footer>
-            <div class="total_que">
-                <!--Here w'll insert  Question Count Number from Javascript-->
-            </div>
-            <button class="next_btn">Nastepne pytanie</button>
-        </footer>
-    </div>
-
-    <!--Result Box-->
-    <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-award"></i>
+            </header>
+            <section>
+                <div class="que_text">
+                    <!--Here w'll insert questions from Javascript file-->
+                </div>
+                <div class="option_list">
+                    <!--Here w'll insert options from Javascript File-->
+                </div>
+            </section>
+            <!--Footer of Quiz Box-->
+            <footer>
+                <div class="total_que">
+                    <!--Here w'll insert  Question Count Number from Javascript-->
+                </div>
+                <button class="next_btn">Nastepne pytanie</button>
+            </footer>
         </div>
-        <div class="complete_text">Ukonczyłes test!</div>
-        <div class="score_text">
-            <!--Here w'll insert Score Result from Javascript-->
+        <!--Result Box-->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <div class="complete_text">Ukonczyłes test!</div>
+            <div class="score_text">
+                <!--Here w'll insert Score Result from Javascript-->
+            </div>
+            <div class="buttons">
+                <button class="restart">Gramy jeszcze raz!</button>
+                <button class="quit">Koniec</button>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="restart">Gramy jeszcze raz!</button>
-            <button class="quit">Koniec</button>
-        </div>
-    </div>
-    
-    <!--Inside this Javascript file w'll insert Questions and Options only-->
-    <script src="js/questions.js"></script>
 
-    <!--Inside this Javascript file w'll code all quiz codes-->
-    <script src="js/script.js"></script>
-    
-</body>
+        <!--Inside this Javascript file w'll insert Questions and Options only-->
+        <script src="js/questions.js"></script>
+
+        <!--Inside this Javascript file w'll code all quiz codes-->
+        <script src="js/script.js"></script>
+    </body>
 </html>
