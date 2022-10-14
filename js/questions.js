@@ -13,7 +13,7 @@ let questions = [
     },
     {
         numb: 2,
-        question: "Konstruktor mający stopien profesora",
+        question: "Konstruktor mający stopien naukowy",
         answer: "A.W.",
         options: [
             "R.S.",
