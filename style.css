@@ -321,6 +321,10 @@ footer button.show {
     border: 1px solid #38b6fe;
     transition: all 0.3s ease;
 }
+.result_imgs {
+    max-height: 250px; 
+    display: none;
+}
 .buttons button.restart {
     color: #fff;
     line-height: 1em;

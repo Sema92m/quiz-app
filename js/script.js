@@ -26,8 +26,8 @@ continue_btn.onclick = () => {
     queCounter(1); //Passing 1 Parameter To QueCounter
     // startTimer(15); //Calling StartTimer Function
     // startTimerLine(0); //Calling StartTimerLine Function
-
 };
+
 let timeValue = 15;
 let que_count = 0;
 let que_numb = 1;
@@ -55,8 +55,8 @@ restart_quiz.onclick = () => {
     // startTimer(timeValue); //Calling startTimer Function
     // startTimerLine(widthValue) //Calling startTimerLine Function
     // timeText.textContent = ("Time Left");
+    addImgDisplayNone();
     next_btn.classList.remove("show"); //Hide The Next Button
-    addImgDisplayNone(); 
 };
 
 //If QuitQuiz Button Clicked
@@ -92,25 +92,10 @@ function showQuestions(index) {
     const que_text = document.querySelector(".que_text");
 
     //Creating a new span and div tag for question and option  and passing the value using array index
-    let que_tag =
-        "<span>" +
-        questions[index].numb +
-        ". " +
-        questions[index].question +
-        "</span>";
-    let option_tag =
-        '<div class="option"><span>' +
-        questions[index].options[0] +
-        "</span></div>" +
-        '<div class="option"><span>' +
-        questions[index].options[1] +
-        "</span></div>" +
-        '<div class="option"><span>' +
-        questions[index].options[2] +
-        "</span></div>" +
-        '<div class="option"><span>' +
-        questions[index].options[3] +
-        "</span></div>";
+    let que_tag = `<span>${questions[index].numb}. ${questions[index].question}</span>`;
+
+    let option_tag = `<div class="option"><span>${questions[index].options[0]}</span></div><div class="option"><span>${questions[index].options[1]}</span></div><div class="option"><span>${questions[index].options[2]}</span></div>
+        <div class="option"><span>${questions[index].options[3]}</span></div>`;
     que_text.innerHTML = que_tag; //Adding new span tag inside que_tag
     option_list.innerHTML = option_tag; //Adding new div tag inside option_tag
 
@@ -128,8 +113,8 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //If User Clicked On Options
 function optionSelected(answer) {
-    clearInterval(counter); //Clear Counter
-    clearInterval(counterLine); //Clear countryLine
+    // clearInterval(counter); //Clear Counter
+    // clearInterval(counterLine); //Clear countryLine
     let userAns = answer.textContent; //Getting user selected option
     let correcAns = questions[que_count].answer; //Getting correct answer from array
     const allOptions = option_list.children.length; // Getting all options items
@@ -139,12 +124,12 @@ function optionSelected(answer) {
         userScore += 1; //Upgrading score value width 1
         answer.classList.add("correct"); //Adding green color to correct selected option
         answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
-        console.log("Correct Answer");
-        console.log("Your correct answers = " + userScore);
+        // console.log("Correct Answer");
+        // console.log("Your correct answers = " + userScore);
     } else {
         answer.classList.add("incorrect"); //Adding red color to correct selected option
         answer.insertAdjacentHTML("beforeend", crossIconTag); //Adding cross icon to the correct selected option
-        console.log("Wrong Answer");
+        // console.log("Wrong Answer");
         for (i = 0; i < allOptions; i++) {
             if (option_list.children[i].textContent == correcAns) {
                 option_list.children[i].setAttribute("class", "option correct"); //Adding green color to matched option
@@ -152,7 +137,7 @@ function optionSelected(answer) {
                     "beforeend",
                     tickIconTag
                 ); //Adding tick icon to matched option
-                console.log("Auto selected correct answer.");
+                // console.log("Auto selected correct answer.");
             }
         }
     }
@@ -162,6 +147,7 @@ function optionSelected(answer) {
     next_btn.classList.add("show"); //Show the next button if user selected any option
 }
 
+let resultImgs = document.querySelectorAll("[data-type-img]");
 let imgA = document.querySelector(".result_img_a");
 let imgB = document.querySelector(".result_img_b");
 let imgC = document.querySelector(".result_img_c");
@@ -177,56 +163,31 @@ function showResult() {
     if (userScore <= 1) {
         //If user score more than 4
         imgA.style.display = "block";
-        let scoreTag =
-            "<span>Spoko 💎, masz <p>" +
-            userScore +
-            "</p> z <p>" +
-            questions.length +
-            "</p></span>";
+        let scoreTag = `<span>Spoko 💎, masz <p>"${userScore}"</p> z <p>"${questions.length}"</p></span>`;
         scoreText.innerHTML = scoreTag; //Adding new tag inside score_text
     }
     if (userScore == 2) {
         //If user score more than 3
         imgB.style.display = "block";
-        let scoreTag =
-            "<span>Spoko 💎, masz <p>" +
-            userScore +
-            "</p> z <p>" +
-            questions.length +
-            "</p></span>";
+        let scoreTag = `<span>Prawie ci sie udało 💎, masz <p>"${userScore}"</p> z <p>"${questions.length}"</p></span>`;
         scoreText.innerHTML = scoreTag; //Adding new tag inside score_text
     }
     if (userScore == 3) {
         //If user score more than 1
         imgC.style.display = "block";
-        let scoreTag =
-            "<span>Nie zle 😎, masz <p>" +
-            userScore +
-            "</p> z <p>" +
-            questions.length +
-            "</p></span>";
+        let scoreTag = `<span>Nie źle 😎, masz <p>"${userScore}"</p> z <p>"${questions.length}"</p></span>`;
         scoreText.innerHTML = scoreTag;
     }
     if (userScore == 4) {
         //if user score less than 1
         imgD.style.display = "block";
-        let scoreTag =
-            "<span>Słabo 😥, masz <p>" +
-            userScore +
-            "</p> z <p>" +
-            questions.length +
-            "</p></span>";
+        let scoreTag = `<span>Słabo 😥, masz <p>"${userScore}"</p> z <p>"${questions.length}"</p></span>`;
         scoreText.innerHTML = scoreTag;
     }
     if (userScore == 5) {
         //If user score more than 4
         imgE.style.display = "block";
-        let scoreTag =
-            "<span>Spoko 💎, masz <p>" +
-            userScore +
-            "</p> z <p>" +
-            questions.length +
-            "</p></span>";
+        let scoreTag = `<span>Cieńko 😥, masz <p>"${userScore}"</p> z <p>"${questions.length}"</p></span>`;
         scoreText.innerHTML = scoreTag; //Adding new tag inside score_text
     }
 }
@@ -273,18 +234,12 @@ function showResult() {
 
 function queCounter(index) {
     //Creating a new span tag and passing the question number and total
-    let totalQueCounTag =
-        "<span><p>Pytanie</p><p>" + index + "</p> z <p>" + questions.length;
+    let totalQueCounTag = `<span><p>Pytanie</p><p>"${index}"</p> z <p>"${questions.length}"`;
     bottom_ques_counter.innerHTML = totalQueCounTag; //Adding new span tag inside bottom_ques_counter
 }
 
-
-
 function addImgDisplayNone() {
-    
-    imgA.style.display = "none";
-    imgB.style.display = "none";
-    imgC.style.display = "none";
-    imgD.style.display = "none";
-    imgE.style.display = "none";
+    resultImgs.forEach(function (item) {
+        item.style.display = "none";
+    });
 }
